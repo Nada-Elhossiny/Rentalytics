@@ -19,6 +19,9 @@ Analyzing Airbnb Data to Optimize Your Stay
 - Looked at the distribution of neighbourhood frequency
 
 ## Model Selection
-- Attempted a linear regression model which performed very poorly
-- Attempted a Random Forest model which performed significantly better then the linear regression model
-- Attempted a XGBoost model which had comparable performance to the Random Forest without hyperparameter turning
+- Attempted a linear regression model which performed very poorly with 700+ columns, but performed significantly better when the number of features was in the 20s.
+- Attempted a Random Forest model which performed significantly better then the linear regression model when there were 700+ features, but only slightly better when the feature number was in the 20s.
+- Attempted a XGBoost model which had comparable performance to the Random Forest without hyperparameter turning when there were 700+ features, and slightly worse when the feature number was in the 20s.
+
+## Feature Engineering
+- Created a distance_from_toronto column which calculates the distance between the Airbnb listing and the CN tower using the Haversine formula.
